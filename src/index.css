@@ -1,4 +1,10 @@
 @import 'tailwindcss';
+/* 
+* {
+    margin: 0;
+    padding: 0;
+ box-sizing: border-box;   
+} */
 
 html,
 body {
@@ -7,4 +13,14 @@ body {
     color: rgb(165, 208, 57);
     scroll-behavior: smooth;
     overflow-x: hidden;
+}
+
+@layer components {
+    #splitText {
+        .word1,
+        .word12,
+        .word17 {
+            @apply border-2 border-blue-600 border-dashed;
+        }
+    }
 }
