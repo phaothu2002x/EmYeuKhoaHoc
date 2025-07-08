@@ -1,9 +1,9 @@
-import React from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger, SplitText } from 'gsap/all';
 import Welcome from './components/Welcome';
 import HeroSection from './components/HeroSection';
-import gsap from 'gsap';
 import TextAnim from './components/TextAnim';
-import { ScrollTrigger, SplitText } from 'gsap/all';
+import MaskImaged from './components/MaskImaged';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 const App = () => {
@@ -12,6 +12,7 @@ const App = () => {
             <Welcome />
             <HeroSection />
             <TextAnim />
+            <MaskImaged />
             <div className=" my-10 min-h-dvh bg-amber-200" />
         </main>
     );
