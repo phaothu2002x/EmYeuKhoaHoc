@@ -4,6 +4,7 @@ import Welcome from './components/Welcome';
 import HeroSection from './components/HeroSection';
 import TextAnim from './components/TextAnim';
 import MaskImaged from './components/MaskImaged';
+import MaskedText from './components/MaskedText';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
             <HeroSection />
             <TextAnim />
             <MaskImaged />
+            <MaskedText />
             <div className=" my-10 min-h-dvh bg-amber-200" />
         </main>
     );
