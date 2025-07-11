@@ -13,6 +13,18 @@ body {
     overflow-x: hidden;
 }
 
+@utility flex-center {
+    @apply flex justify-center items-center;
+}
+
+@utility boxContent {
+    @apply mt-20 px-30 py-10 w-full min-h-[50vh] overflow-hidden;
+}
+
+@utility bgGreen {
+    @apply bg-emerald-300;
+}
+
 @layer components {
     #splitText {
         .word1,
@@ -38,6 +50,17 @@ body {
 
         .newContainer {
             @apply absolute top-0 right-0 w-1/2 h-1/2 translate-y-1/2 bg-amber-400;
+        }
+    }
+
+    #timeline {
+        @apply boxContent;
+
+        #fred {
+            @apply flex-center;
+        }
+        img {
+            @apply w-30 my-5 mx-5;
         }
     }
 }

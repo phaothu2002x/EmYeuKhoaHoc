@@ -12,26 +12,20 @@ const FlipTechnique = () => {
         if (moved) {
             document.querySelector('.parentContainer').appendChild(box);
             // Apply scale transform before animation
-            gsap.set(box, { scale: 1 });
+            // gsap.set(box, { scale: 1 });
         } else {
             document.querySelector('.newContainer').appendChild(box);
             // Reset scale when moving back
-            gsap.set(box, { scale: 2 });
+            // gsap.set(box, { scale: 2 });
         }
 
         Flip.from(state, {
-            duration: 1.5,
+            duration: 2.5,
             ease: 'power1.inOut',
+            rotate: 360,
             scale: true,
             absolute: true,
-            onComplete: () => {
-                gsap.to(box, {
-                    scale: moved ? 1 : 2,
-                    duration: 0.5,
-                });
-            },
         });
-        console.log(moved);
 
         setMoved(!moved);
     };

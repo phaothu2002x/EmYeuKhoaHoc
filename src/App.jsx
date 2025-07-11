@@ -6,6 +6,7 @@ import TextAnim from './components/TextAnim';
 import MaskImaged from './components/MaskImaged';
 import MaskedText from './components/MaskedText';
 import FlipTechnique from './components/FlipTechnique';
+import TimeLine from './components/TimeLine';
 gsap.registerPlugin(ScrollTrigger, SplitText, Flip);
 const App = () => {
     return (
@@ -16,6 +17,7 @@ const App = () => {
             <MaskImaged />
             <MaskedText />
             <FlipTechnique />
+            <TimeLine />
             <div className=" my-10 min-h-dvh bg-amber-200" />
         </main>
     );
