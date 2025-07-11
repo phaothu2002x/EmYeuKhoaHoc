@@ -63,4 +63,11 @@ body {
             @apply w-30 my-5 mx-5;
         }
     }
+    .buttonList {
+        @apply flex-center gap-2;
+
+        button {
+            @apply cursor-pointer active:bg-emerald-200 px-10 py-5 rounded-2xl bg-emerald-300 text-2xl font-bold text-black;
+        }
+    }
 }
