@@ -73,7 +73,7 @@ body {
 
     #hoverText {
         .item {
-            @apply flex-center cursor-pointer;
+            @apply flex items-center justify-start cursor-pointer;
             .dot {
                 @apply w-5 h-5 rounded-full bg-gray-500;
             }

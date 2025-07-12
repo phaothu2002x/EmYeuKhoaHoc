@@ -12,11 +12,11 @@ const FlipTechnique = () => {
         if (moved) {
             document.querySelector('.parentContainer').appendChild(box);
             // Apply scale transform before animation
-            // gsap.set(box, { scale: 1 });
+            gsap.set(box, { scale: 1 });
         } else {
             document.querySelector('.newContainer').appendChild(box);
             // Reset scale when moving back
-            // gsap.set(box, { scale: 2 });
+            gsap.set(box, { scale: 2 });
         }
 
         Flip.from(state, {
