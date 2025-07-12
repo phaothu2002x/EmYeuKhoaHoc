@@ -9,7 +9,8 @@ import FlipTechnique from './components/FlipTechnique';
 import TimeLine from './components/TimeLine';
 import HoverText from './components/HoverText';
 import FinalProject from './components/FinalProject';
-gsap.registerPlugin(ScrollTrigger, SplitText, Flip);
+import { GSDevTools } from 'gsap/GSDevTools';
+gsap.registerPlugin(ScrollTrigger, SplitText, Flip, GSDevTools);
 const App = () => {
     return (
         <main>

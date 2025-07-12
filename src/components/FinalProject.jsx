@@ -1,26 +1,30 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { GSDevTools } from 'gsap/GSDevTools';
+gsap.registerPlugin(GSDevTools);
 import React from 'react';
 
 const FinalProject = () => {
     useGSAP(() => {
-        const tl = gsap.timeline();
+        const tl = gsap.timeline({
+            repeat: -1,
+            yoyo: true,
+            defaults: { opacity: 0, ease: 'back' },
+        });
 
-        tl.from('.background', { opacity: 0, scale: 0, duration: 1 })
+        tl.from('.background', { scale: 0, duration: 1 })
             .from('.left-content h1', {
                 x: 80,
-                opacity: 0,
             })
-            .from('.left-content h2', { opacity: 0, x: -80 })
-            .from('.left-content p', { opacity: 0, y: 30 })
-            .from('.left-content .myButton', { opacity: 0, y: 30 })
+            .from('.left-content h2', { x: -80 })
+            .from('.left-content p', { y: 30 })
+            .from('.left-content .myButton', { y: 30 })
             .from('.right-content img', {
-                opacity: 0,
                 scale: 0,
                 transformOrigin: '100% 50%',
                 stagger: 0.3,
-                ease: 'power1.inOut',
             });
+        // GSDevTools.create({ animation: tl });
     });
 
     return (
