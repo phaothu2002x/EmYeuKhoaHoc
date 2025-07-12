@@ -70,4 +70,16 @@ body {
             @apply cursor-pointer active:bg-emerald-200 px-10 py-5 rounded-2xl bg-emerald-300 text-2xl font-bold text-black;
         }
     }
+
+    #hoverText {
+        .item {
+            @apply flex-center cursor-pointer;
+            .dot {
+                @apply w-5 h-5 rounded-full bg-gray-500;
+            }
+            .text {
+                @apply text-3xl font-bold text-gray-500 uppercase ml-2;
+            }
+        }
+    }
 }
