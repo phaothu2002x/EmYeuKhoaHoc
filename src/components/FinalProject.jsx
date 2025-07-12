@@ -25,10 +25,26 @@ const FinalProject = () => {
                 stagger: 0.3,
             });
         // GSDevTools.create({ animation: tl });
+
+        //typing text
+
+        gsap.to('.typingText', {
+            duration: 3,
+            yoyo: true,
+            repeat: -1,
+            text: {
+                value: 'This is the new text with the typing style',
+                ease: 'power2.inOut',
+                newClass: 'text-blue-700',
+            },
+        });
     });
 
     return (
-        <div id="finalProject" className="boxContent flex justify-center">
+        <div
+            id="finalProject"
+            className="boxContent flex items-center flex-col"
+        >
             <div className="background">
                 <div className="left-content">
                     <h1 className="font-extrabold text-7xl">Creative</h1>
@@ -53,6 +69,9 @@ const FinalProject = () => {
                     </div>
                 </div>
             </div>
+            <p className="typingText text-3xl font-medium mt-12">
+                I love You bAby
+            </p>
         </div>
     );
 };

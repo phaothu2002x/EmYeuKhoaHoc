@@ -1,5 +1,5 @@
 import gsap from 'gsap';
-import { ScrollTrigger, SplitText, Flip } from 'gsap/all';
+import { ScrollTrigger, SplitText, Flip, TextPlugin } from 'gsap/all';
 import Welcome from './components/Welcome';
 import HeroSection from './components/HeroSection';
 import TextAnim from './components/TextAnim';
@@ -10,7 +10,9 @@ import TimeLine from './components/TimeLine';
 import HoverText from './components/HoverText';
 import FinalProject from './components/FinalProject';
 import { GSDevTools } from 'gsap/GSDevTools';
-gsap.registerPlugin(ScrollTrigger, SplitText, Flip, GSDevTools);
+
+gsap.registerPlugin(ScrollTrigger, SplitText, Flip, GSDevTools, TextPlugin);
+
 const App = () => {
     return (
         <main>
