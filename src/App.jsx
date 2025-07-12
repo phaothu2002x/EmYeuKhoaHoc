@@ -8,6 +8,7 @@ import MaskedText from './components/MaskedText';
 import FlipTechnique from './components/FlipTechnique';
 import TimeLine from './components/TimeLine';
 import HoverText from './components/HoverText';
+import FinalProject from './components/FinalProject';
 gsap.registerPlugin(ScrollTrigger, SplitText, Flip);
 const App = () => {
     return (
@@ -20,6 +21,7 @@ const App = () => {
             <FlipTechnique />
             <TimeLine />
             <HoverText />
+            <FinalProject />
             <div className=" my-10 min-h-dvh bg-amber-200" />
         </main>
     );
