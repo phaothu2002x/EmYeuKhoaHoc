@@ -8,7 +8,7 @@ const TextAnim = () => {
         const textSplit = SplitText.create('.animText', {
             type: 'words, lines, chars',
             wordsClass: 'word++',
-            // propIndex: true,
+            // propIndex: true, =>
         });
 
         gsap.from(textSplit.chars, {

@@ -70,7 +70,7 @@ const FinalProject = () => {
                 </div>
             </div>
             <p className="typingText text-3xl font-medium mt-12">
-                I love You bAby
+                I love You bAby git
             </p>
         </div>
     );

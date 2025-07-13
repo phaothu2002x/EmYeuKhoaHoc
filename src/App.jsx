@@ -10,6 +10,7 @@ import TimeLine from './components/TimeLine';
 import HoverText from './components/HoverText';
 import FinalProject from './components/FinalProject';
 import { GSDevTools } from 'gsap/GSDevTools';
+import TextIntro from './components/TextIntro';
 
 gsap.registerPlugin(ScrollTrigger, SplitText, Flip, GSDevTools, TextPlugin);
 
@@ -24,7 +25,8 @@ const App = () => {
             <FlipTechnique />
             <TimeLine />
             <HoverText />
-            <FinalProject />
+            {/* <FinalProject /> */}
+            <TextIntro />
             <div className=" my-10 min-h-dvh bg-amber-200" />
         </main>
     );
