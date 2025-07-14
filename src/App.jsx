@@ -11,6 +11,7 @@ import HoverText from './components/HoverText';
 import FinalProject from './components/FinalProject';
 import { GSDevTools } from 'gsap/GSDevTools';
 import TextIntro from './components/TextIntro';
+import HermanHoper from './components/HermanHoper';
 
 gsap.registerPlugin(ScrollTrigger, SplitText, Flip, GSDevTools, TextPlugin);
 
@@ -19,14 +20,15 @@ const App = () => {
         <main>
             <Welcome />
             <HeroSection />
+            <TextIntro />
             <TextAnim />
             <MaskImaged />
             <MaskedText />
             <FlipTechnique />
             <TimeLine />
             <HoverText />
-            {/* <FinalProject /> */}
-            <TextIntro />
+            <FinalProject />
+            <HermanHoper />
             <div className=" my-10 min-h-dvh bg-amber-200" />
         </main>
     );

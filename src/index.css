@@ -155,4 +155,36 @@ body {
             }
         }
     }
+
+    #hermanHoper {
+        @apply flex-center;
+
+        .demo {
+            @apply w-[400px] h-[400px]  relative bg-teal-100 rounded-4xl;
+
+            .hermanWrapper {
+                @apply h-[305px] w-full overflow-hidden relative rounded-[50%];
+
+                .herman {
+                    @apply w-[100px] absolute bottom-[0] left-1/2 -translate-x-1/2;
+                }
+            }
+            .shadow {
+                width: 150px;
+                height: 20px;
+                position: absolute;
+                left: 125px;
+                top: 290px;
+                opacity: 0;
+                background: radial-gradient(
+                    rgb(100, 100, 100, 0.6),
+                    rgb(0, 0, 0, 0) 75%
+                );
+                background-repeat: no-repeat;
+            }
+            .hole {
+                @apply absolute top-[290px] left-1/2 -translate-x-1/2 w-[150px] h-[20px] rounded-[50%] bg-black;
+            }
+        }
+    }
 }
