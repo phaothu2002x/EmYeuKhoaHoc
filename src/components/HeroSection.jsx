@@ -22,13 +22,13 @@ const HeroSection = () => {
         );
 
         gsap.to('.hero', {
-            backgroundPosition: '50% 0%',
+            backgroundPosition: 'center -200px',
             ease: 'none',
             scrollTrigger: {
                 trigger: '.hero',
                 start: 'top top',
                 end: 'bottom top',
-                scrub: true,
+                scrub: 1,
             },
         });
     }, []);

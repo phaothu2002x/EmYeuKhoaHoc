@@ -31,7 +31,7 @@ const MaskedText = () => {
             //     });
             // },
         });
-        splitText.words.forEach((item, i) => {
+        splitText.chars.forEach((item, i) => {
             const dir = gsap.utils.random(directions);
             gsap.from(
                 item,
