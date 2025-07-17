@@ -20,14 +20,29 @@ const ScrollTriggerPage = () => {
             sectionRef.current.forEach((section, i) => {
                 ScrollTrigger.create({
                     trigger: section,
-                    start: 'top 100px',
-                    end: 'bottom 100px',
+                    start: () => 'top ' + navRef.current.offsetHeight,
+                    end: () => 'bottom ' + navRef.current.offsetHeight,
                     markers: true,
-                    animation: gsap.to(navRef.current, {
-                        backgroundColor: navColors[i],
-                        immediateRender: false,
-                    }),
-                    toggleActions: 'restart none none reverse',
+                    preventOverlaps: true,
+                    // animation: gsap.to(navRef.current, {
+                    //     backgroundColor: navColors[i],
+                    //     immediateRender: false,
+                    // }),
+                    // toggleActions: 'restart none none reverse',
+
+                    //option 2 better to understand
+                    onEnter: () => {
+                        gsap.to('.nav', {
+                            backgroundColor: navColors[i],
+                            duration: 0.3,
+                        });
+                    },
+                    onLeaveBack: () => {
+                        gsap.to('.nav', {
+                            backgroundColor: navColors[i - 1],
+                            duration: 0.3,
+                        });
+                    },
                 });
             });
         },

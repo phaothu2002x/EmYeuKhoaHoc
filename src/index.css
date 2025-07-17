@@ -198,10 +198,10 @@ body {
             display: flex;
             align-items: center;
             flex-wrap: wrap;
-            height: 100px;
+            min-height: 100px;
 
             a {
-                @apply text-2xl text-white font-bold mx-3 p-4 inline-block;
+                @apply text-5xl text-white font-bold mx-3 p-4 inline-block;
             }
         }
         .fullscreen {
