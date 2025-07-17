@@ -1,36 +1,20 @@
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router';
 import gsap from 'gsap';
 import { ScrollTrigger, SplitText, Flip, TextPlugin } from 'gsap/all';
-import Welcome from './components/Welcome';
-import HeroSection from './components/HeroSection';
-import TextAnim from './components/TextAnim';
-import MaskImaged from './components/MaskImaged';
-import MaskedText from './components/MaskedText';
-import FlipTechnique from './components/FlipTechnique';
-import TimeLine from './components/TimeLine';
-import HoverText from './components/HoverText';
-import FinalProject from './components/FinalProject';
 import { GSDevTools } from 'gsap/GSDevTools';
-import TextIntro from './components/TextIntro';
-import HermanHoper from './components/HermanHoper';
 
+import ScrollTriggerPage from './pages/ScrollTriggerPage';
+import HomePage from './pages/HomePage';
 gsap.registerPlugin(ScrollTrigger, SplitText, Flip, GSDevTools, TextPlugin);
 
 const App = () => {
     return (
-        <main>
-            <Welcome />
-            <HeroSection />
-            <TextIntro />
-            <TextAnim />
-            <MaskImaged />
-            <MaskedText />
-            <FlipTechnique />
-            <TimeLine />
-            <HoverText />
-            <FinalProject />
-            <HermanHoper />
-            <div className=" my-10 min-h-dvh bg-amber-200" />
-        </main>
+        <Router>
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/scrolltrigger" element={<ScrollTriggerPage />} />
+            </Routes>
+        </Router>
     );
 };
 

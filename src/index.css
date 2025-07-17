@@ -187,4 +187,32 @@ body {
             }
         }
     }
+
+    #scrollNavChangeColor {
+        .nav {
+            top: 0;
+            width: 100vw;
+            padding: 20px;
+            position: fixed;
+            background: #00bfff;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 100px;
+
+            a {
+                @apply text-2xl text-white font-bold mx-3 p-4 inline-block;
+            }
+        }
+        .fullscreen {
+            width: 100vw;
+            height: 100vh;
+            padding: 5vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 8vw;
+            color: white;
+        }
+    }
 }
