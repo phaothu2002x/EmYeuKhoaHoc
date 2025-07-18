@@ -6,6 +6,7 @@ import React, { useRef } from 'react';
 gsap.registerPlugin(ScrollTrigger);
 const ScrollTriggerPage = () => {
     const containerRef = useRef();
+    const hermanRef = useRef();
     const navRef = useRef();
     const sectionRef = useRef([]);
     const sectionColors = ['dodgerblue', 'salmon', 'green', 'purple', 'maroon'];
@@ -13,9 +14,6 @@ const ScrollTriggerPage = () => {
 
     useGSAP(
         () => {
-            // gsap.set('.fullscreen', {
-            //     backgroundColor: gsap.utils.wrap(sectionColors),
-            // });
             //
             sectionRef.current.forEach((section, i) => {
                 ScrollTrigger.create({
@@ -46,6 +44,28 @@ const ScrollTriggerPage = () => {
                 });
             });
         },
+
+        { scope: containerRef }
+    );
+
+    useGSAP(
+        () => {
+            const backToTop = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#scrollNavChangeColor',
+                    start: '75% bottom',
+                    toggleActions: 'play none none reverse',
+                },
+            });
+            backToTop
+                .set('.message', { autoAlpha: 1 })
+                .from('.message img', { yPercent: 100, ease: 'back' })
+                .from('.message .linkwrap a', {
+                    xPercent: -100,
+                    opacity: 0,
+                    duration: 0.3,
+                });
+        },
         { scope: containerRef }
     );
 
@@ -70,6 +90,16 @@ const ScrollTriggerPage = () => {
                     </div>
                 );
             })}
+
+            <div ref={hermanRef} className="message">
+                <div className="linkwrap">
+                    <a href="#top">Go back to top</a>
+                </div>
+                <img
+                    src="https://assets.codepen.io/32887/herman.svg"
+                    width="80"
+                />
+            </div>
         </main>
     );
 };
