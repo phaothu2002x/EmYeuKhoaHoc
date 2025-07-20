@@ -10,6 +10,7 @@ import HoverText from '../components/HoverText';
 import FinalProject from '../components/FinalProject';
 import TextIntro from '../components/TextIntro';
 import HermanHoper from '../components/HermanHoper';
+import TextWarp from '../components/TextWarp';
 
 const HomePage = () => {
     return (
@@ -20,11 +21,13 @@ const HomePage = () => {
             <TextAnim />
             <MaskImaged />
             <MaskedText />
+            <TextWarp />
             <FlipTechnique />
             <TimeLine />
             <HoverText />
             <FinalProject />
             <HermanHoper />
+
             <div className=" my-10 min-h-dvh bg-amber-200" />
         </main>
     );
