@@ -11,6 +11,12 @@ const Welcome = () => {
             >
                 ScrollTrigger page
             </Link>
+            <Link
+                to="/utilsBasic"
+                className="bg-gray-600 p-3 text-2xl text-white mx-2"
+            >
+                Uttils Basic page
+            </Link>
         </div>
     );
 };
