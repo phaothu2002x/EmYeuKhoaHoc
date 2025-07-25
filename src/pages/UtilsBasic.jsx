@@ -12,7 +12,7 @@ const UtilsBasic = () => {
             const container = containerRef.current;
             if (!container) return;
 
-            //convert to quicksetter
+            //convert to quicksetter for better performance
             const setScaleX = gsap.quickSetter('.box', 'scaleX');
             const setScaleY = gsap.quickSetter('.box', 'scaleY');
 

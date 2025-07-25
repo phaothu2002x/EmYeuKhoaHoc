@@ -281,4 +281,17 @@ body {
             } */
         }
     }
+
+    #text3d {
+        .wrapper-content {
+            @apply flex items-center justify-center;
+            .demo {
+                @apply relative perspective-midrange w-full;
+
+                div {
+                    @apply absolute text-4xl top-8 left-1/2 -translate-x-1/2 text-nowrap;
+                }
+            }
+        }
+    }
 }

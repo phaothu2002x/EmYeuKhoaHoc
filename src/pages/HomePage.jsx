@@ -12,6 +12,7 @@ import TextIntro from '../components/TextIntro';
 import HermanHoper from '../components/HermanHoper';
 import TextWarp from '../components/TextWarp';
 import Transform3D from '../components/Transform3D';
+import Text3d from '../components/Text3d';
 
 const HomePage = () => {
     return (
@@ -24,6 +25,7 @@ const HomePage = () => {
             <MaskedText />
             <TextWarp />
             <Transform3D />
+            <Text3d />
             <FlipTechnique />
             <TimeLine />
             <HoverText />
